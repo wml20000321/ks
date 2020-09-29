@@ -6,10 +6,14 @@ import Ks from '../views/Ks.vue'
 import Cj from '../views/Cj.vue'
 import Ct from '../views/Ct.vue'
 import Tm from '../views/Tm.vue'
-
+import table from '../components/CjCpt/MyTable.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path:'/table',
+    component:table
+  },
   {
     path: '/',
     component: Home

@@ -218,6 +218,5 @@ export default {
     // 考试答案数组
     kslist:[{index:0,name:'题目类型',bool:true}],
     // 考试题目数组
-    kslists:[]
-
+    kslists:[],
 }
