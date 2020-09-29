@@ -7,34 +7,41 @@
     </div>
     <!-- 选项 -->
     <div class="row">
-      <div class="col-4">
+      <div class="col-4" v-for="(v, k) in cls" :key="k">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title"></h4>
-            <a class="btn btn-primary" href="" role="button"></a>
+            <h4 class="card-title">{{ v }}</h4>
+            <a class="btn btn-primary" @click="confirm(v)" role="button"
+              >确认考试</a
+            >
           </div>
         </div>
-      </div>
-      <div class="col-9">
-        <router-view></router-view>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
-      class:['','']
-    }
+      cls: ["Java", "JavaScript", "Vue"],
+    };
   },
   methods: {
-    //
+    //确认考试方法
+    confirm(v) {
+      if (confirm("确认考试吗？")) {
+        this.$router.push(`/ks_${v}`);
+        this.sum++;
+      }
+    },
   },
+  computed: mapState(["sum"]),
 };
 </script>
 
 <style>
-
 </style>
