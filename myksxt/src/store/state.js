@@ -226,7 +226,7 @@ export default {
 
     ],
     // 考试答案数组
-    kslist: [{title:"Java",daan:[{ind:0,da:"B",flag:true},{ind:1,da:"A",flag:true}]},{title:"Java",daan:[{ind:0,da:"B",flag:true},{ind:1,da:"A",flag:true}]}],
+    kslist: [{title:"Java",daan:[{index:0,da:"B",bool:true},{index:1,da:"A",bool:true}]},{title:"Java",daan:[{index:0,da:"B",bool:true},{index:1,da:"A",bool:true}]}],
     // 考试题目数组
     kslists:[],
 

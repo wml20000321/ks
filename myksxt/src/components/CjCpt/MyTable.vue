@@ -15,9 +15,9 @@
       <tbody>
         <tr v-for="(item, index) in cj.daan" :key="index">
           <td scope="row">{{ index + 1 }}</td>
-          <td>{{ tmlist[item.ind].title }}</td>
+          <td>{{ tmlist[item.index].title }}</td>
           <td>{{ item.da }}</td>
-          <td>{{ tmlist[item.ind].right }}</td>
+          <td>{{ tmlist[item.index].right }}</td>
         </tr>
       </tbody>
     </table>
@@ -75,7 +75,7 @@ export default {
     dadui: function () {
       let dui = 0;
       for (let i = 0; i < this.cj.daan.length; i++) {
-        if (this.cj.daan[i].flag) {
+        if (this.cj.daan[i].bool) {
           dui++;
         }
       }
