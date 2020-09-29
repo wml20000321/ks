@@ -8,7 +8,13 @@ import Cj from '../views/Cj.vue'
 import Ct from '../views/Ct.vue'
 import Tm from '../views/Tm.vue'
 import Ks_Java from '../views/Ks_Java.vue'
+
 import table from '../components/CjCpt/MyTable.vue'
+
+import Ks_Js from '../views/Ks_Js.vue'
+import Ks_Vue from '../views/Ks_Vue.vue'
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,6 +46,14 @@ const routes = [
   {//Java项目
       path:'/ks_Java',
       component:Ks_Java
+  },
+  {//Js项目
+      path:'/ks_JavaScript',
+      component:Ks_Js
+  },
+  {//Vue项目
+      path:'/ks_Vue',
+      component:Ks_Vue
   }
 ]
 

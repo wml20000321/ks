@@ -118,7 +118,7 @@ export default {
     };
   },
   computed: {
-    ...mapState({ list: "javalist", list2: "kslist" }),
+    ...mapState({ list: "jslist", list2: "kslist" }),
     pr() {
       return (100 / this.list.length) * (this.num + 1);
     },
@@ -156,12 +156,12 @@ export default {
       console.log(this.daan);
     },
     tijiao() {
-      let daans = { title: "Java", daan: this.daan };
+      let daans = { title: "JavaScript", daan: this.daan };
       this.save(daans);
       this.flag = !this.flag;
       console.log(this.list2);
     },
-    zhuan(v) {
+     zhuan(v) {
       if (v == 1) {
         this.$router.push(`/`);
       }
