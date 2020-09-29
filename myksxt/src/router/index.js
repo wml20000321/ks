@@ -10,6 +10,8 @@ import Tm from '../views/Tm.vue'
 
 //Java题目
 import Ks_Java from '../views/Ks_Java.vue'
+import Ks_Js from '../views/Ks_Js.vue'
+import Ks_Vue from '../views/Ks_Vue.vue'
 
 Vue.use(VueRouter)
 
@@ -37,6 +39,14 @@ const routes = [
   {//Java项目
       path:'/ks_Java',
       component:Ks_Java
+  },
+  {//Js项目
+      path:'/ks_JavaScript',
+      component:Ks_Js
+  },
+  {//Vue项目
+      path:'/ks_Vue',
+      component:Ks_Vue
   }
 ]
 

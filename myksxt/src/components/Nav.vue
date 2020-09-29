@@ -15,20 +15,8 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">首页</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ks">我要考试</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/cj">我的成绩</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/tm">考题归纳</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ct">错题总结</a>
+        <li class="nav-item" v-for="(v, k) in titles" :key="k">
+          <a class="nav-link" @click="zhuan(v.val)">{{ v.name }}</a>
         </li>
       </ul>
     </div>
@@ -36,7 +24,30 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Nav",
+  data() {
+    return {
+      titles: [
+        { name: "首页", val: "/" },
+        { name: "我要考试", val: "/ks" },
+        { name: "我的成绩", val: "/cj" },
+        { name: "考题归纳", val: "/tm" },
+        { name: "错题总结", val: "/ct" },
+      ],
+      paths:'/',
+    };
+  },
+  methods: {
+    zhuan(val) {
+      console.log(val);
+      if(val!=this.paths){
+        this.paths=val;
+        this.$router.push(this.paths);
+      }
+    },
+  },
+};
 </script>
 
 <style lang="css">

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+
 
 export default {
   data() {
@@ -35,11 +35,9 @@ export default {
     confirm(v) {
       if (confirm("确认考试吗？")) {
         this.$router.push(`/ks_${v}`);
-        this.sum++;
       }
     },
   },
-  computed: mapState(["sum"]),
 };
 </script>
 
